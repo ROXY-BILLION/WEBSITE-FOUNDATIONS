@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Ember & Oak, a modern restaurant serving thoughtfully prepared dishes with seasonal ingredients and warm hospitality.">
+  <meta name="theme-color" content="#171717">
+  <title>Ember & Oak | A Modern Dining Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo" aria-label="Ember and Oak home">
+        ember<span>&</span>oak
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="nav-links"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservations" class="btn btn-nav">Reserve a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <span class="hero-label">Thoughtfully made. Beautifully served.</span>
+
+        <h1>
+          Good Food.<br>
+          <span>Great Company.</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover a dining experience where bold flavours, seasonal
+          ingredients, and warm hospitality come together around the table.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn">Explore Our Menu</a>
+          <a href="#reservations" class="btn btn-outline">Book a Table</a>
+        </div>
+
+        <div class="hero-details">
+          <p>Fresh seasonal ingredients</p>
+          <span aria-hidden="true">•</span>
+          <p>Made with care, served with heart</p>
+        </div>
+      </div>
+
+      <a href="#story" class="hero-scroll" aria-label="Scroll to our story">
+        Discover more <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="container story-grid">
+        <div class="story-image-wrapper">
+          <img
+            class="story-image"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+            alt="Beautifully presented dishes on a restaurant dining table"
+            loading="lazy"
+          >
+
+          <div class="story-badge">
+            <span>Made with</span>
+            <strong>Passion</strong>
+            <span>Every day</span>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <span class="section-label">Our Story</span>
+
+          <h2>
+            A little fire.<br>
+            A lot of <span>heart.</span>
+          </h2>
+
+          <p>
+            Ember & Oak was created around a simple idea: memorable meals
+            begin with good ingredients, thoughtful preparation, and people
+            who genuinely care about what they serve.
+          </p>
+
+          <p>
+            Our kitchen brings familiar flavours into a modern dining
+            experience, pairing seasonal produce with creative techniques
+            and a welcoming atmosphere.
+          </p>
+
+          <div class="story-highlights">
+            <div class="story-highlight">
+              <strong>Fresh</strong>
+              <span>Seasonal ingredients</span>
+            </div>
+
+            <div class="story-highlight">
+              <strong>Thoughtful</strong>
+              <span>Carefully crafted dishes</span>
+            </div>
+
+            <div class="story-highlight">
+              <strong>Welcoming</strong>
+              <span>A table for everyone</span>
+            </div>
+          </div>
+
+          <a href="#experience" class="text-link">
+            Discover our philosophy <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">From Our Kitchen</span>
+          <h2>Made to be <span>savoured.</span></h2>
+          <p>
+            Explore a selection of our kitchen favourites, prepared with
+            quality ingredients and a little creative flair.
+          </p>
+        </div>
+
+        <div class="menu-filters" role="group" aria-label="Filter menu items">
+          <button class="filter-btn active" type="button" data-category="all" aria-pressed="true">
+            All Dishes
+          </button>
+          <button class="filter-btn" type="button" data-category="starters" aria-pressed="false">
+            Starters
+          </button>
+          <button class="filter-btn" type="button" data-category="mains" aria-pressed="false">
+            Main Courses
+          </button>
+          <button class="filter-btn" type="button" data-category="desserts" aria-pressed="false">
+            Desserts
+          </button>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-category="starters">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+                alt="Fresh salad with colourful seasonal ingredients"
+                loading="lazy"
+              >
+              <span class="menu-tag">Fresh Favourite</span>
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-card-heading">
+                <h3>Garden Harvest Salad</h3>
+                <span class="menu-price">$12</span>
+              </div>
+              <p>
+                Crisp greens, seasonal vegetables, toasted seeds, and a
+                bright house-made dressing.
+              </p>
+              <span class="menu-category">Starter</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="starters">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=85"
+                alt="Freshly prepared bruschetta topped with tomatoes"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-card-heading">
+                <h3>Tomato Bruschetta</h3>
+                <span class="menu-price">$10</span>
+              </div>
+              <p>
+                Toasted artisan bread, ripe tomatoes, fresh herbs, and
+                a drizzle of olive oil.
+              </p>
+              <span class="menu-category">Starter</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="mains">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=85"
+                alt="Grilled steak served with vegetables"
+                loading="lazy"
+              >
+              <span class="menu-tag">Chef's Choice</span>
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-card-heading">
+                <h3>Ember-Grilled Steak</h3>
+                <span class="menu-price">$28</span>
+              </div>
+              <p>
+                Grilled steak with herb butter, roasted vegetables, and
+                a rich pan sauce.
+              </p>
+              <span class="menu-category">Main Course</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="mains">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85"
+                alt="Pasta dish with fresh herbs and sauce"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-card-heading">
+                <h3>Wild Herb Pasta</h3>
+                <span class="menu-price">$19</span>
+              </div>
+              <p>
+                Handmade-style pasta tossed with garlic, garden herbs,
+                parmesan, and olive oil.
+              </p>
+              <span class="menu-category">Main Course</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="desserts">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                alt="Chocolate cake decorated for dessert"
+                loading="lazy"
+              >
+              <span class="menu-tag">Sweet Favourite</span>
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-card-heading">
+                <h3>Chocolate Layer Cake</h3>
+                <span class="menu-price">$9</span>
+              </div>
+              <p>
+                Rich chocolate cake layered with smooth chocolate
+                cream and a delicate cocoa finish.
+              </p>
+              <span class="menu-category">Dessert</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="menu-note">
+          Menu items and prices shown are illustrative and may vary.
+        </p>
+
+        <div class="menu-cta">
+          <p>Found your favourite? We'd love to welcome you.</p>
+          <a href="#reservations" class="btn">Reserve Your Table</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="special section" id="special">
+      <div class="container special-grid">
+        <div class="special-content">
+          <span class="section-label">A Kitchen Favourite</span>
+          <h2>Meet the <span>Ember Special.</span></h2>
+          <p>
+            A celebration of deep, smoky flavours and carefully selected
+            ingredients. Our featured dish brings the warmth of the grill
+            and the freshness of the season to your table.
+          </p>
+
+          <ul class="special-features">
+            <li>Prepared fresh to order</li>
+            <li>Seasonal sides and house-made sauces</li>
+            <li>Thoughtfully balanced flavours</li>
+          </ul>
+
+          <a href="#reservations" class="btn">Come Taste It</a>
+        </div>
+
+        <div class="special-image-wrapper">
+          <img
+            class="special-image"
+            src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1100&q=85"
+            alt="A beautifully prepared grilled meat dish"
+            loading="lazy"
+          >
+
+          <div class="special-price">
+            <span>Featured selection</span>
+            <strong>From $28</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">More Than a Meal</span>
+          <h2>Come for the food.<br><span>Stay for the feeling.</span></h2>
+          <p>
+            Whether it is a quiet dinner or a lively celebration, we want
+            every visit to feel special.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85"
+              alt="An intimate restaurant table setting"
+              loading="lazy"
+            >
+            <div class="experience-card-content">
+              <span>01</span>
+              <h3>Thoughtful Dining</h3>
+              <p>
+                Relax in a welcoming space designed for good food and
+                meaningful conversations.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img
+              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85"
+              alt="Ingredients and preparation in a restaurant kitchen"
+              loading="lazy"
+            >
+            <div class="experience-card-content">
+              <span>02</span>
+              <h3>Made with Care</h3>
+              <p>
+                We value fresh ingredients, considered preparation, and
+                attention to the smallest details.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img
+              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+              alt="A table arranged for a special gathering"
+              loading="lazy"
+            >
+            <div class="experience-card-content">
+              <span>03</span>
+              <h3>Moments Together</h3>
+              <p>
+                Make room for birthdays, date nights, family dinners, and
+                those spontaneous reasons to celebrate.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservations section" id="reservations">
+      <div class="container reservations-grid">
+        <div class="reservation-content">
+          <span class="section-label">Your Table Awaits</span>
+          <h2>Let's make it <span>a date.</span></h2>
+          <p>
+            Planning a special evening or simply craving something
+            delicious? Send us your preferred details using the form.
+          </p>
+
+          <div class="reservation-note">
+            <span class="reservation-icon" aria-hidden="true">✦</span>
+            <div>
+              <h3>A little planning goes a long way</h3>
+              <p>
+                Please provide your preferred date, time, and party size.
+                We'll be ready to help with your booking request.
+              </p>
+            </div>
+          </div>
+
+          <div class="reservation-contact">
+            <h3>Prefer to speak with us?</h3>
+            <p>Call us during opening hours to discuss your plans.</p>
+            <a href="tel:+15550123456">+1 (555) 012-3456</a>
+          </div>
+        </div>
+
+        <form class="reservation-form" id="reservation-form">
+          <h3>Request a Reservation</h3>
+          <p class="form-intro">Tell us a little about your visit.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reservation-name">Full Name</label>
+              <input
+                type="text"
+                id="reservation-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="reservation-email">Email Address</label>
+              <input
+                type="email"
+                id="reservation-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reservation-date">Preferred Date</label>
+              <input
+                type="date"
+                id="reservation-date"
+                name="date"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="reservation-time">Preferred Time</label>
+              <select id="reservation-time" name="time" required>
+                <option value="">Choose a time</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="21:00">9:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-guests">Number of Guests</label>
+            <select id="reservation-guests" name="guests" required>
+              <option value="">Select party size</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-occasion">Occasion (Optional)</label>
+            <select id="reservation-occasion" name="occasion">
+              <option value="">Just dining</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="date-night">Date night</option>
+              <option value="business">Business dinner</option>
+              <option value="celebration">Other celebration</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-message">Additional Requests</label>
+            <textarea
+              id="reservation-message"
+              name="message"
+              rows="4"
+              placeholder="Dietary requirements or special requests..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn reservation-submit">
+            Submit Booking Request
+          </button>
+
+          <p class="form-message" id="reservation-message" aria-live="polite"></p>
+          <p class="form-disclaimer">
+            This demonstration form does not create a confirmed reservation.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Kind Words</span>
+          <h2>Good memories are <span>shared.</span></h2>
+          <p>
+            Great food is even better when it brings people together.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              "The food was beautifully prepared, and the atmosphere made
+              our evening feel genuinely special. We'll definitely be back."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AM</div>
+              <div>
+                <h3>Alex Morgan</h3>
+                <p>Dinner guest</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              "A lovely place for a relaxed dinner. The service was warm,
+              the menu was interesting, and every detail felt considered."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">JT</div>
+              <div>
+                <h3>Jamie Taylor</h3>
+                <p>Dinner guest</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              "We came for a celebration and had a wonderful experience.
+              Great flavours, a welcoming team, and a beautiful setting."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SC</div>
+              <div>
+                <h3>Sam Carter</h3>
+                <p>Celebration guest</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="testimonial-note">
+          These sample testimonials are placeholders for the design.
+        </p>
+      </div>
+    </section>
+
+    <section class="visit section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Come Say Hello</span>
+          <h2>Find your way to <span>our table.</span></h2>
+          <p>
+            We look forward to welcoming you. Here are our sample contact
+            details and opening hours.
+          </p>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-card">
+            <span class="visit-icon" aria-hidden="true">⌖</span>
+            <h3>Our Location</h3>
+            <p>25 Oakwood Avenue</p>
+            <p>Sample City, ST 10001</p>
+            <a
+              href="https://maps.google.com/?q=25+Oakwood+Avenue"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              Get Directions →
+            </a>
+          </div>
+
+          <div class="visit-card">
+            <span class="visit-icon" aria-hidden="true">◷</span>
+            <h3>Opening Hours</h3>
+            <ul class="opening-hours">
+              <li><span>Monday – Thursday</span><span>12 PM – 9 PM</span></li>
+              <li><span>Friday</span><span>12 PM – 10 PM</span></li>
+              <li><span>Saturday</span><span>11 AM – 10 PM</span></li>
+              <li><span>Sunday</span><span>11 AM – 8 PM</span></li>
+            </ul>
+          </div>
+
+          <div class="visit-card">
+            <span class="visit-icon" aria-hidden="true">✉</span>
+            <h3>Get in Touch</h3>
+            <p>Questions about the menu or your visit?</p>
+            <a href="mailto:hello@emberandoak.example">
+              hello@emberandoak.example
+            </a>
+            <a href="tel:+15550123456">+1 (555) 012-3456</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-content">
+        <span class="section-label">Pull Up a Chair</span>
+        <h2>Your next favourite meal is waiting.</h2>
+        <p>
+          Bring your appetite, invite your favourite people, and let us
+          take care of the rest.
+        </p>
+        <a href="#reservations" class="btn btn-light">Plan Your Visit</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">ember<span>&</span>oak</a>
+          <p>
+            Thoughtful cooking, seasonal ingredients, and warm hospitality.
+            There's always room at our table.
+          </p>
+
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#special">Chef's Special</a></li>
+            <li><a href="#experience">The Experience</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Plan Your Visit</h3>
+          <ul>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#contact">Location & Hours</a></li>
+            <li><a href="#testimonials">Guest Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+            <li><a href="mailto:hello@emberandoak.example">Email Us</a></li>
+            <li>25 Oakwood Avenue</li>
+            <li>Sample City, ST 10001</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Ember & Oak Restaurant.
+          All rights reserved.
+        </p>
+        <a href="#home" class="back-to-top">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
