@@ -3,74 +3,684 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Home Services</title>
+    <meta name="description" content="Nova Home Services provides reliable home cleaning, repairs, and garden care.">
+    <title>Nova Home Services | Care for Your Home</title>
+
     <link rel="stylesheet" href="style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
->
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- 1. Navigation Bar -->
     <header class="header">
-        <div class="logo"><i class="fa-solid fa-house"></i> Nova Home</div>
-        <nav>
-            <ul class="nav-links" id="navlink">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Nova<span>.</span></a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#faq">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <a href="#contact" class="btn btn-nav">Book a Service</a>
         </nav>
-        <div class="menu-btn" id="menubtn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
     </header>
+
     <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="title">NOVA HOME SERVICES</div>
-            <h1>A Better Home Starts Here.</h1>
-            <p>Reliable home cleaning, repairs, and maintenance services you can trust.</p>
-            <div class="buttons">
-                <button href="#services" class="bt1">Explore Our Services</button>
-                <button href="#services" class="bt2">Contact Us</button>
+
+        <!-- 2. Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <p class="hero-label">YOUR HOME, OUR PRIORITY</p>
+
+                <h1>
+                    A Better Home
+                    Starts With <span>Nova.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Reliable home cleaning, repairs and maintenance
+                    services that make your everyday life easier.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        Book a Service
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        Explore Services
+                    </a>
+                </div>
+
+                <div class="hero-trust">
+                    <span>Reliable Service</span>
+                    <span>Quality Care</span>
+                    <span>Customer Focused</span>
+                </div>
             </div>
-            <img src="images/Nova.jpeg" alt="Our Homes">
         </section>
-        <!-- Services Section -->
-         <section id="services">
-            <h2>WHAT WE DO</h2>
-            <h3>Our Home Services</h3>
-            <p>Practical solutions to keep your home clean, comfortable, and working perfectly.</p>
-            <div class="service-card">
-                <div class="card">
-                    <img src="images/female-cleaner.jpeg" alt="Home Cleaning">
-                    <h3>Home Cleaning</h3>
-                    <p>Keep your home fresh, tidy, and spotless.</p>
-                    <p>Learn More →</p>
+
+        <!-- 3. Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">WHAT WE DO</p>
+                    <h2>Our Home Services</h2>
+                    <p class="section-description">
+                        Everything you need to keep your home clean,
+                        comfortable and well maintained.
+                    </p>
                 </div>
-                <div class="card">
-                    <img src="images/gardener.jpeg" alt="Garden Care">
-                    <h3>Garden Care</h3>
-                    <p>Maintain a neat and welcoming outdoor space.</p>
-                    <p>Learn More →</p>
-                </div>
-                <div class="card">
-                    <img src="images/male-repair.jpeg" alt="Home Repairs">
-                    <h3>Home Repairs</h3>
-                    <p>Reliable help with everyday household repairs.</p>
-                    <p>Learn More →</p>
-                </div>
-                <div class="card">
-                    <img src="images/male-ac-repair.jpeg" alt="Maintenance">
-                    <h3>Home Cleaning</h3>
-                    <p>Keep household systems in good condition.</p>
-                    <p>Learn More →</p>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                            alt="Professional home cleaning"
+                            class="service-image"
+                            loading="lazy"
+                        >
+
+                        <div class="service-content">
+                            <span class="service-number">01</span>
+                            <h3>Home Cleaning</h3>
+                            <p>
+                                Enjoy a fresh and tidy home with our
+                                dependable cleaning services.
+                            </p>
+                            <a href="#contact" class="service-link">
+                                Book Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1581147036324-c1c89c2c8a3d?auto=format&fit=crop&w=700&q=80"
+                            alt="Tools used for household repairs"
+                            class="service-image"
+                            loading="lazy"
+                        >
+
+                        <div class="service-content">
+                            <span class="service-number">02</span>
+                            <h3>Home Repairs</h3>
+                            <p>
+                                Get help with everyday repairs and
+                                household maintenance tasks.
+                            </p>
+                            <a href="#contact" class="service-link">
+                                Book Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=80"
+                            alt="Plants in a well-maintained garden"
+                            class="service-image"
+                            loading="lazy"
+                        >
+
+                        <div class="service-content">
+                            <span class="service-number">03</span>
+                            <h3>Garden Care</h3>
+                            <p>
+                                Keep your outdoor spaces neat,
+                                green and welcoming.
+                            </p>
+                            <a href="#contact" class="service-link">
+                                Book Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
-         </section>
+        </section>
+
+        <!-- 4. About Section -->
+        <section class="about section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-image-wrapper">
+                    <img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                        alt="Comfortable and well-maintained modern home"
+                        class="about-image"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="about-content">
+                    <p class="section-label">ABOUT NOVA</p>
+
+                    <h2>Making Home Care Simple</h2>
+
+                    <p>
+                        We believe that a clean, comfortable home
+                        makes everyday life better. Nova Home Services
+                        helps households take care of their spaces
+                        with dependable home services.
+                    </p>
+
+                    <p>
+                        From routine cleaning to everyday repairs
+                        and garden care, we aim to make maintaining
+                        your home simpler and less stressful.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Get in Touch
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Why Choose Us Section -->
+        <section class="why-us section" id="why-us">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">WHY NOVA</p>
+                    <h2>Home Care You Can Count On</h2>
+                    <p class="section-description">
+                        We focus on making home maintenance convenient
+                        and delivering a dependable customer experience.
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            ✓
+                        </div>
+                        <h3>Reliable Service</h3>
+                        <p>
+                            We aim to make every service appointment
+                            straightforward and dependable.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            ⏱
+                        </div>
+                        <h3>Convenient Booking</h3>
+                        <p>
+                            Tell us what you need through a simple
+                            booking request.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            ★
+                        </div>
+                        <h3>Quality Care</h3>
+                        <p>
+                            We aim to help you maintain a clean,
+                            comfortable and welcoming home.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            ♡
+                        </div>
+                        <h3>Customer Focus</h3>
+                        <p>
+                            Your needs and service preferences matter
+                            throughout the booking process.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. How It Works Section -->
+        <section class="how-it-works section" id="how-it-works">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">SIMPLE PROCESS</p>
+                    <h2>How It Works</h2>
+                    <p class="section-description">
+                        Getting started with Nova takes just a few steps.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Choose a Service</h3>
+                        <p>
+                            Select the home service that suits your needs.
+                        </p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Send a Request</h3>
+                        <p>
+                            Complete the booking form with your details.
+                        </p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>Discuss the Details</h3>
+                        <p>
+                            Arrange the service details with our team.
+                        </p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">04</span>
+                        <h3>Enjoy Your Home</h3>
+                        <p>
+                            Look forward to a cleaner and better-maintained
+                            living space.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Customer Testimonials Section -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">CUSTOMER FEEDBACK</p>
+                    <h2>What Our Customers Say</h2>
+                    <p class="section-description">
+                        Great home care starts with listening to customers.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The booking process was simple, and I
+                            appreciated how easy it was to explain
+                            the service I needed."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                A
+                            </div>
+                            <div>
+                                <h3>Alex Morgan</h3>
+                                <p>Home Cleaning</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "I like having different home maintenance
+                            services available in one place. It makes
+                            planning easier."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                J
+                            </div>
+                            <div>
+                                <h3>Jordan Lee</h3>
+                                <p>Home Repairs</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The website makes it easy to explore
+                            services and send a request for the
+                            kind of help I need."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                S
+                            </div>
+                            <div>
+                                <h3>Sam Taylor</h3>
+                                <p>Garden Care</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact and Booking Section -->
+        <section class="contact section" id="contact">
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+                    <p class="section-label">GET IN TOUCH</p>
+
+                    <h2>Let's Take Care of Your Home</h2>
+
+                    <p>
+                        Have a cleaning, repair or garden care request?
+                        Complete the form and tell us how we can help.
+                    </p>
+
+                    <div class="contact-detail">
+                        <h3>Our Services</h3>
+                        <p>Home Cleaning, Home Repairs and Garden Care</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <h3>Booking Information</h3>
+                        <p>
+                            Submit your request with your preferred
+                            service and additional details.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Choose a Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Home Cleaning">Home Cleaning</option>
+                            <option value="Home Repairs">Home Repairs</option>
+                            <option value="Garden Care">Garden Care</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Service Date</label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Service Address</label>
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            placeholder="Enter the service address"
+                            autocomplete="street-address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Describe the service you need"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Booking Request
+                    </button>
+
+                    <p
+                        class="form-message"
+                        id="form-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- 9. FAQ Section -->
+        <section class="faq section" id="faq">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">NEED TO KNOW?</p>
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="section-description">
+                        Find answers to common questions about our services.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+                        <summary>
+                            What services does Nova provide?
+                        </summary>
+                        <p>
+                            Nova Home Services covers home cleaning,
+                            everyday household repairs and garden care.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            How can I request a service?
+                        </summary>
+                        <p>
+                            Complete the booking form, select your service
+                            and provide the requested details.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Can I choose my preferred service date?
+                        </summary>
+                        <p>
+                            Yes. You can enter a preferred date in the
+                            booking form. The date is a request and is
+                            not confirmed until arrangements are made.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Does submitting the form confirm my booking?
+                        </summary>
+                        <p>
+                            No. Submitting a request does not automatically
+                            confirm an appointment. The booking process
+                            requires follow-up and confirmation.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            How can I explain a special service request?
+                        </summary>
+                        <p>
+                            Use the additional details field in the booking
+                            form to describe your requirements.
+                        </p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="final-cta">
+            <div class="container final-cta-content">
+                <div>
+                    <p class="section-label">READY TO GET STARTED?</p>
+                    <h2>Give Your Home the Care It Deserves.</h2>
+                    <p>
+                        Explore our services and send us your booking request.
+                    </p>
+                </div>
+
+                <a href="#contact" class="btn btn-light">
+                    Book a Service
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <script src="script.js"></script>
+    <!-- 10. Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        Nova<span>.</span>
+                    </a>
+
+                    <p>
+                        Making home care simpler through cleaning,
+                        repairs and garden maintenance services.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Home Cleaning</a></li>
+                        <li><a href="#services">Home Repairs</a></li>
+                        <li><a href="#services">Garden Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#testimonials">Customer Reviews</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#contact">Book a Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="current-year"></span>
+                    Nova Home Services. All rights reserved.
+                </p>
+
+                <div class="footer-socials">
+                    <!-- Replace # with actual social profile URLs. -->
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="LinkedIn">Lk</a>
+                </div>
+
+                <a href="#home" class="back-to-top">
+                     &uarr;
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 </html>
