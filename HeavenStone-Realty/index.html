@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover exceptional homes, luxury apartments, and exclusive properties with HeavenStone Realty.">
+    <title>HeavenStone Realty | Find Your Place in the World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-mark">H</span>
+                <span class="logo-text">
+                    HeavenStone
+                    <small>REALTY & PROPERTIES</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact" class="nav-cta">Find Your Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <p class="eyebrow">EXCEPTIONAL LIVING, THOUGHTFULLY FOUND</p>
+
+                <h1>Find a Place<br>That Feels Like <em>Home.</em></h1>
+
+                <p class="hero-description">
+                    Discover remarkable properties, beautiful architecture,
+                    and spaces designed around the life you want to live.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#properties" class="btn btn-primary">Explore Properties</a>
+                    <a href="#about" class="btn btn-outline">Discover Our Story</a>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>250+</strong>
+                    <span>Exceptional properties to discover</span>
+                </div>
+            </div>
+
+            <div class="property-search container">
+                <div class="search-heading">
+                    <span>Find Your Property</span>
+                    <p>Let's find the right place for you.</p>
+                </div>
+
+                <form class="search-form" id="property-search">
+                    <div class="form-group">
+                        <label for="search-location">Location</label>
+                        <input type="text" id="search-location" name="location" placeholder="e.g. Lekki, Lagos">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search-type">Property Type</label>
+                        <select id="search-type" name="type">
+                            <option value="all">All Properties</option>
+                            <option value="house">Houses</option>
+                            <option value="apartment">Apartments</option>
+                            <option value="villa">Villas</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search-status">Listing Type</label>
+                        <select id="search-status" name="status">
+                            <option value="all">Buy or Rent</option>
+                            <option value="sale">For Sale</option>
+                            <option value="rent">For Rent</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary search-btn">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="properties section-padding" id="properties">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">OUR CURATED COLLECTION</p>
+                        <h2>Properties Worth <em>Coming Home To.</em></h2>
+                    </div>
+
+                    <a href="#contact" class="text-link">Find Your Property &rarr;</a>
+                </div>
+
+                <div class="property-filters">
+                    <button class="filter-btn active" data-category="all">All Properties</button>
+                    <button class="filter-btn" data-category="house">Houses</button>
+                    <button class="filter-btn" data-category="apartment">Apartments</button>
+                    <button class="filter-btn" data-category="villa">Villas</button>
+                </div>
+
+                <div class="property-grid">
+                    <article class="property-card" data-category="house" data-status="sale" data-location="lekki lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85" alt="Contemporary luxury house with landscaped grounds">
+                            <span class="property-badge">Featured</span>
+                            <span class="property-type">For Sale</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Lekki Phase 1, Lagos</p>
+                            <h3>The Ivory Residence</h3>
+                            <p class="property-price">₦285,000,000</p>
+
+                            <div class="property-details">
+                                <span>4 Bedrooms</span>
+                                <span>5 Bathrooms</span>
+                                <span>Duplex</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-category="apartment" data-status="rent" data-location="victoria island lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modern apartment with elegant architecture">
+                            <span class="property-type">For Rent</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Victoria Island, Lagos</p>
+                            <h3>The Azure Apartments</h3>
+                            <p class="property-price">₦18,000,000 <small>/ year</small></p>
+
+                            <div class="property-details">
+                                <span>3 Bedrooms</span>
+                                <span>3 Bathrooms</span>
+                                <span>Apartment</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-category="villa" data-status="sale" data-location="ikoyi lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=85" alt="Luxury villa with swimming pool">
+                            <span class="property-badge">Exclusive</span>
+                            <span class="property-type">For Sale</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Ikoyi, Lagos</p>
+                            <h3>The Haven Villa</h3>
+                            <p class="property-price">₦650,000,000</p>
+
+                            <div class="property-details">
+                                <span>5 Bedrooms</span>
+                                <span>6 Bathrooms</span>
+                                <span>Villa</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-category="apartment" data-status="sale" data-location="ikeja lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Bright modern apartment interior">
+                            <span class="property-type">For Sale</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Ikeja GRA, Lagos</p>
+                            <h3>The Sterling Suite</h3>
+                            <p class="property-price">₦125,000,000</p>
+
+                            <div class="property-details">
+                                <span>3 Bedrooms</span>
+                                <span>3 Bathrooms</span>
+                                <span>Apartment</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-category="house" data-status="rent" data-location="ajah lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Stylish detached family home">
+                            <span class="property-type">For Rent</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Ajah, Lagos</p>
+                            <h3>The Willow House</h3>
+                            <p class="property-price">₦8,500,000 <small>/ year</small></p>
+
+                            <div class="property-details">
+                                <span>4 Bedrooms</span>
+                                <span>4 Bathrooms</span>
+                                <span>Detached</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-category="villa" data-status="sale" data-location="banana island lagos">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85" alt="Contemporary luxury home with expansive windows">
+                            <span class="property-badge">Premium</span>
+                            <span class="property-type">For Sale</span>
+                        </div>
+
+                        <div class="property-info">
+                            <p class="property-location">Banana Island, Lagos</p>
+                            <h3>The Grandstone Estate</h3>
+                            <p class="property-price">₦1,200,000,000</p>
+
+                            <div class="property-details">
+                                <span>6 Bedrooms</span>
+                                <span>7 Bathrooms</span>
+                                <span>Luxury Villa</span>
+                            </div>
+
+                            <a href="#contact" class="property-link">Enquire About Property &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="empty-message" id="empty-message" hidden>
+                    No properties match your search. Try another category or location.
+                </p>
+            </div>
+        </section>
+
+        <section class="categories section-padding" id="categories">
+            <div class="container">
+                <div class="section-heading centered">
+                    <p class="eyebrow">EXPLORE YOUR OPTIONS</p>
+                    <h2>A Space for Every <em>Chapter.</em></h2>
+                    <p>From your first apartment to your forever home, find a space that suits your ambitions.</p>
+                </div>
+
+                <div class="category-grid">
+                    <a href="#properties" class="category-card">
+                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=85" alt="Contemporary family house">
+                        <span>01</span>
+                        <h3>Family Homes</h3>
+                        <p>Spaces to grow and belong.</p>
+                    </a>
+
+                    <a href="#properties" class="category-card">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" alt="Luxury apartment interior">
+                        <span>02</span>
+                        <h3>Luxury Apartments</h3>
+                        <p>Refined city living.</p>
+                    </a>
+
+                    <a href="#properties" class="category-card">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=85" alt="Luxury private villa">
+                        <span>03</span>
+                        <h3>Private Villas</h3>
+                        <p>Privacy with distinction.</p>
+                    </a>
+
+                    <a href="#properties" class="category-card">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=85" alt="Modern commercial office space">
+                        <span>04</span>
+                        <h3>Commercial Spaces</h3>
+                        <p>Room for your next venture.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section-padding" id="about">
+            <div class="container about-grid">
+                <div class="about-images">
+                    <img class="about-main-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Beautifully designed modern home">
+                    <div class="about-note">
+                        <strong>Every detail matters.</strong>
+                        <span>Every home has a story.</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="eyebrow">THE HEAVENSTONE DIFFERENCE</p>
+                    <h2>More Than Property.<br><em>A Sense of Belonging.</em></h2>
+
+                    <p>
+                        We believe finding a home should be an exciting chapter,
+                        not an overwhelming process. That's why we put people
+                        at the centre of every property decision.
+                    </p>
+
+                    <p>
+                        From your first viewing to the final details, our team
+                        is here to help you explore your options with confidence
+                        and find a place that feels right.
+                    </p>
+
+                    <div class="about-stats">
+                        <div>
+                            <strong>10+</strong>
+                            <span>Years of Experience</span>
+                        </div>
+                        <div>
+                            <strong>500+</strong>
+                            <span>Happy Clients</span>
+                        </div>
+                        <div>
+                            <strong>250+</strong>
+                            <span>Listed Properties</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Get to Know Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section-padding" id="services">
+            <div class="container">
+                <div class="section-heading centered">
+                    <p class="eyebrow">HERE FOR YOUR NEXT MOVE</p>
+                    <h2>Real Estate, Made <em>Personal.</em></h2>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <h3>Buy a Property</h3>
+                        <p>Explore carefully selected properties and get guidance throughout your home-buying journey.</p>
+                        <a href="#contact" class="text-link">Explore Buying &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <h3>Rent a Home</h3>
+                        <p>Find a rental that matches your lifestyle, preferred location, and budget.</p>
+                        <a href="#contact" class="text-link">Explore Rentals &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <h3>Sell Your Property</h3>
+                        <p>Present your property professionally and connect with prospective buyers.</p>
+                        <a href="#contact" class="text-link">Sell With Us &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">04</span>
+                        <h3>Property Consultation</h3>
+                        <p>Get personalised guidance to help you make informed property decisions.</p>
+                        <a href="#contact" class="text-link">Talk to Our Team &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="exclusive section-padding" id="exclusive">
+            <div class="container exclusive-grid">
+                <div class="exclusive-content">
+                    <p class="eyebrow">THE EXCLUSIVE COLLECTION</p>
+                    <h2>Designed for a Life <em>Well Lived.</em></h2>
+                    <p>
+                        Discover an exceptional residence where thoughtful
+                        architecture, generous spaces, and elegant details
+                        come together.
+                    </p>
+
+                    <ul class="exclusive-list">
+                        <li>Thoughtfully designed interiors</li>
+                        <li>Premium neighbourhood location</li>
+                        <li>Spacious indoor and outdoor living</li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary">Request Property Details</a>
+                </div>
+
+                <div class="exclusive-image">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=85" alt="Exclusive contemporary luxury residence">
+                    <div class="exclusive-label">
+                        <span>HEAVENSTONE SELECT</span>
+                        <strong>Exceptional by Nature</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section-padding" id="testimonials">
+            <div class="container">
+                <div class="section-heading centered">
+                    <p class="eyebrow">KIND WORDS, REAL EXPERIENCES</p>
+                    <h2>Stories That <em>Feel Like Home.</em></h2>
+                </div>
+
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>
+                            "The team made our home search feel clear and
+                            manageable. We found a place that genuinely fits
+                            our family."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AO</div>
+                            <div>
+                                <h3>Amara Okafor</h3>
+                                <p>Home Buyer</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>
+                            "Professional, thoughtful, and attentive to our
+                            needs. The entire experience felt much easier
+                            than we expected."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">TO</div>
+                            <div>
+                                <h3>Tunde Ojo</h3>
+                                <p>Property Client</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>
+                            "From the first conversation to the final viewing,
+                            we felt supported and informed at every step."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CN</div>
+                            <div>
+                                <h3>Chika Nwosu</h3>
+                                <p>Rental Client</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section-padding" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-content">
+                    <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+                    <h2>Let's Find Somewhere <em>Extraordinary.</em></h2>
+                    <p>
+                        Tell us a little about what you're looking for.
+                        Our team will help you explore your options.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>Email</span>
+                        <a href="mailto:hello@heavenstonerealty.com">hello@heavenstonerealty.com</a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Phone</span>
+                        <a href="tel:+2348000000000">+234 800 000 0000</a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Office</span>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="enquiry-form">
+                    <h3>Tell Us What You Need</h3>
+
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-interest">I'm Interested In</label>
+                        <select id="contact-interest" name="interest" required>
+                            <option value="">Choose an option</option>
+                            <option value="buy">Buying a property</option>
+                            <option value="rent">Renting a property</option>
+                            <option value="sell">Selling a property</option>
+                            <option value="consultation">Property consultation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Your Message</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your ideal property..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Enquiry</button>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-top">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-mark">H</span>
+                <span class="logo-text">
+                    HeavenStone
+                    <small>REALTY & PROPERTIES</small>
+                </span>
+            </a>
+
+            <p>Thoughtful spaces. Meaningful beginnings.</p>
+
+            <a href="#home" class="back-to-top">Back to Top ↑</a>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; <span id="current-year"></span> HeavenStone Realty. All rights reserved.</p>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#properties">Properties</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
