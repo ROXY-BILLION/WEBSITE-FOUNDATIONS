@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTrack - Workout Preferences</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="top-bar">
+      <a href="#" class="brand">
+        <i class="fa-solid fa-dumbbell"></i>
+        FITTRACK
+      </a>
+
+      <span>YOUR PERSONAL FITNESS SPACE</span>
+    </header>
+
+    <section class="dashboard">
+
+      <div class="intro">
+        <p class="eyebrow">BUILD YOUR ROUTINE</p>
+
+        <h1>Train smarter.<br><span>Stay consistent.</span></h1>
+
+        <p>
+          Create a workout experience that fits your lifestyle.
+          Choose your preferred training duration and save your settings.
+        </p>
+
+        <div class="fitness-note">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Small steps. Consistent progress.</span>
+        </div>
+      </div>
+
+      <section class="settings-panel">
+
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">YOUR SETTINGS</p>
+            <h2>Workout Preferences</h2>
+          </div>
+
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+
+        <div class="setting-group">
+          <label for="duration">Preferred Workout Duration</label>
+
+          <select id="duration">
+            <option value="15 minutes">15 Minutes</option>
+            <option value="30 minutes" selected>30 Minutes</option>
+            <option value="45 minutes">45 Minutes</option>
+            <option value="60 minutes">60 Minutes</option>
+          </select>
+        </div>
+
+        <button id="saveButton">
+          <i class="fa-solid fa-floppy-disk"></i>
+          Save My Preferences
+        </button>
+
+        <p id="feedback"></p>
+
+        <div class="divider"></div>
+
+        <div class="workout-preview">
+          <div class="preview-heading">
+            <i class="fa-solid fa-stopwatch"></i>
+            <h3>Your Workout Plan</h3>
+          </div>
+
+          <p>
+            Your preferred training duration helps you plan your
+            daily exercise routine and stay consistent.
+          </p>
+        </div>
+
+      </section>
+
+    </section>
+
+    <footer>
+      <p>FITTRACK © 2026</p>
+      <p>MOVE BETTER. LIVE BETTER.</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
