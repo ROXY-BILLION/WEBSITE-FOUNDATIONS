@@ -1,0 +1,199 @@
+/*OBJECTS OF INTEREST - TACTILE GALLERY THEME */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-deep: #0d0e12;
+  --bg-surface: #14161d;
+  --bg-card: #1b1e28;
+  --bg-card-hover: #222634;
+  
+  --accent-amber: #f59e0b;
+  --accent-amber-glow: rgba(245, 158, 11, 0.15);
+  
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-glow: rgba(245, 158, 11, 0.4);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Shape & Animation */
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- Base Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at 50% 0%, #1e2230 0%, var(--bg-deep) 75%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  color: var(--accent-amber);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.header p:not(.eyebrow) {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+/* --- Product Card --- */
+.product-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+/* Interactive Card Lighting & Lift */
+.product-card:hover {
+  transform: translateY(-8px);
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
+              0 0 20px var(--accent-amber-glow);
+}
+
+/* Card Visual Header (Icon Display) */
+.product-image {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border: 1px solid var(--border-light);
+  height: 160px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  margin-bottom: 1.75rem;
+  user-select: none;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* Category Badge */
+.category {
+  color: var(--accent-amber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+/* Title & Description */
+.product-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.6rem;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+  line-height: 1.55;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Price Tag */
+.product-card strong {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  margin-top: auto;
+  align-self: flex-start;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-light);
+  width: 100%;
+  transition: var(--transition);
+}
+
+.product-card:hover strong {
+  border-top-color: var(--border-glow);
+  color: var(--accent-amber);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 640px) {
+  body {
+    padding: 2rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .product-grid {
+    gap: 1.25rem;
+  }
+}
