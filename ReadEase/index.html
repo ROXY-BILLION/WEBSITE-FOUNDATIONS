@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadEase - Reading Preferences</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="top-bar">
+      <a href="#" class="brand">
+        <i class="fa-solid fa-book-open"></i>
+        ReadEase
+      </a>
+
+      <span>PERSONAL READING SPACE</span>
+    </header>
+
+    <section class="page-layout">
+
+      <div class="intro">
+        <p class="eyebrow">YOUR SPACE. YOUR STYLE.</p>
+
+        <h1>Make reading<br><span>comfortable.</span></h1>
+
+        <p>
+          Adjust your reading experience to suit your preference.
+          Your saved settings will be waiting when you return.
+        </p>
+
+        <div class="intro-note">
+          <i class="fa-solid fa-bookmark"></i>
+          <span>Your reading preferences, saved locally.</span>
+        </div>
+      </div>
+
+      <section class="settings-panel">
+
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">PERSONALIZATION</p>
+            <h2>Reading Settings</h2>
+          </div>
+
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+
+        <div class="setting-group">
+          <label for="fontSize">Reading Font Size</label>
+
+          <select id="fontSize">
+            <option value="14px">Small</option>
+            <option value="17px" selected>Medium</option>
+            <option value="20px">Large</option>
+            <option value="24px">Extra Large</option>
+          </select>
+        </div>
+
+        <button id="saveButton">
+          <i class="fa-solid fa-floppy-disk"></i>
+          Save Preferences
+        </button>
+
+        <p id="feedback"></p>
+
+        <div class="divider"></div>
+
+        <div class="reading-area">
+          <div class="reading-heading">
+            <i class="fa-solid fa-book"></i>
+            <h3>Reading Preview</h3>
+          </div>
+
+          <p id="readingText">
+            Learning is a continuous journey. Every new idea,
+            every page and every experience gives us an opportunity
+            to grow. Make yourself comfortable and enjoy the process.
+          </p>
+        </div>
+
+      </section>
+
+    </section>
+
+    <footer>
+      <p>READEASE © 2026</p>
+      <p>READ AT YOUR OWN PACE.</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
