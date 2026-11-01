@@ -1,0 +1,238 @@
+/* LITTLE TABLE CAFÉ - MODERN & SLICK THEME */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-main: #121010;
+  --bg-card: #1c1917;
+  --bg-card-hover: #262220;
+  --accent-gold: #d97706;
+  --accent-gold-hover: #b45309;
+  --text-primary: #f5f5f4;
+  --text-secondary: #a8a29e;
+  --text-muted: #78716c;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(217, 119, 6, 0.3);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Layout & Spacing */
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-full: 9999px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Base & Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  background: radial-gradient(circle at top, #2d241e 0%, var(--bg-main) 70%);
+  border-radius: var(--radius-lg);
+}
+
+.eyebrow {
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* --- Menu Section Heading --- */
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.section-heading p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Category Filters --- */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background-color: var(--bg-card-hover);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-btn.active,
+.filter-btn:focus {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  outline: none;
+}
+
+/* --- Menu Grid & Cards --- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.menu-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-gold);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Visual Header */
+.menu-image {
+  background-color: rgba(255, 255, 255, 0.02);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  user-select: none;
+}
+
+/* Card Content Details */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category {
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-content strong {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin-top: auto;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 4rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* --- Responsive Polish --- */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  
+  .filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
