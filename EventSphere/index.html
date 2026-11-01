@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventSphere - Discover Events</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="top-bar">
+
+    <a href="#" class="brand">
+      <i class="fa-solid fa-ticket"></i>
+      Event<span>Sphere</span>
+    </a>
+
+    <button id="menuButton" class="menu-button" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <p class="eyebrow">EXPERIENCES WORTH REMEMBERING</p>
+
+      <h1>Discover events.<br><span>Create memories.</span></h1>
+
+      <p>
+        Find exciting conferences, music experiences and creative
+        exhibitions happening around you.
+      </p>
+
+      <a href="#events" class="hero-link">
+        Explore Events
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
+
+    <section class="events-section" id="events">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIND YOUR NEXT EXPERIENCE</p>
+          <h2>Upcoming Events</h2>
+        </div>
+
+        <select id="savedCategory" aria-label="Preferred event category">
+          <option value="">Choose preference</option>
+          <option value="conference">Conference</option>
+          <option value="music">Music</option>
+          <option value="exhibition">Exhibition</option>
+        </select>
+      </div>
+
+      <div class="filter-buttons">
+        <button id="allBtn">All Events</button>
+        <button id="conferenceBtn">Conference</button>
+        <button id="musicBtn">Music</button>
+        <button id="exhibitionBtn">Exhibition</button>
+      </div>
+
+      <div class="event-grid">
+
+        <article class="event-card conference">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700" alt="Technology conference">
+
+          <div class="card-content">
+            <p>CONFERENCE</p>
+            <h3>FutureTech Summit</h3>
+            <span><i class="fa-regular fa-calendar"></i> December 12, 2026</span>
+          </div>
+        </article>
+
+        <article class="event-card music">
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=700" alt="Live music concert">
+
+          <div class="card-content">
+            <p>MUSIC</p>
+            <h3>Rhythm Live Festival</h3>
+            <span><i class="fa-regular fa-calendar"></i> December 18, 2026</span>
+          </div>
+        </article>
+
+        <article class="event-card exhibition">
+          <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=700" alt="Art exhibition">
+
+          <div class="card-content">
+            <p>EXHIBITION</p>
+            <h3>Creative Vision Expo</h3>
+            <span><i class="fa-regular fa-calendar"></i> December 22, 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button id="savePreference">
+        <i class="fa-solid fa-bookmark"></i>
+        Save My Event Preference
+      </button>
+
+      <p id="preferenceFeedback"></p>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+
+      <div class="contact-info">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Looking for something special?</h2>
+
+        <p>
+          Tell us what kind of experience you're interested in.
+          We'd love to hear from you.
+        </p>
+      </div>
+
+      <form id="contactForm">
+
+        <div class="form-group">
+          <label for="visitorName">Full Name</label>
+          <input type="text" id="visitorName" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="visitorEmail">Email Address</label>
+          <input type="email" id="visitorEmail" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="visitorMessage">Your Message</label>
+          <textarea id="visitorMessage" placeholder="Tell us what you're looking for"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+          Send Message
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <p id="formFeedback"></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EVENTSPHERE © 2026</p>
+    <p>FIND IT. EXPERIENCE IT.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
