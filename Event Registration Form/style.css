@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0c171b;
+  color: #edf5f5;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.page-container {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.top-bar {
+  min-height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #263a3e;
+}
+
+.brand {
+  color: #edf5f5;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand i,
+.brand span {
+  color: #43c6b5;
+}
+
+.top-bar > p {
+  color: #91a7a8;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.event-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 80px;
+  align-items: center;
+  padding: 85px 0;
+}
+
+.event-info {
+  max-width: 560px;
+}
+
+.event-label {
+  color: #43c6b5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.event-info h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.event-info h1 span {
+  display: block;
+  color: #43c6b5;
+}
+
+.event-description {
+  color: #a9babb;
+  line-height: 1.8;
+  font-size: 15px;
+  max-width: 470px;
+  margin: 25px 0 40px;
+}
+
+.event-details {
+  display: grid;
+  gap: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.detail-item > i {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #183034;
+  color: #43c6b5;
+  border: 1px solid #29474a;
+  border-radius: 5px;
+}
+
+.detail-item h3 {
+  font-size: 10px;
+  color: #82999a;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.detail-item p {
+  font-size: 14px;
+}
+
+.event-note {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid #263a3e;
+  margin-top: 40px;
+  padding-top: 25px;
+  color: #a9babb;
+  font-size: 13px;
+}
+
+.event-note i {
+  color: #43c6b5;
+}
+
+.registration-panel {
+  background: #142428;
+  border: 1px solid #294044;
+  padding: 38px;
+  border-radius: 8px;
+}
+
+.form-heading {
+  margin-bottom: 30px;
+}
+
+.form-heading > p {
+  color: #43c6b5;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.form-heading h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.form-heading span {
+  color: #9aadae;
+  font-size: 13px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #dce7e7;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  background: #0d1b1f;
+  border: 1px solid #354b4e;
+  border-radius: 4px;
+  color: #edf5f5;
+  font-size: 13px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #43c6b5;
+}
+
+.form-group input::placeholder {
+  color: #718788;
+}
+
+.register-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 4px;
+  background: #43c6b5;
+  color: #0c171b;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background 0.3s;
+}
+
+.register-btn:hover {
+  background: #65d8c9;
+}
+
+#feedback {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-footer {
+  border-top: 1px solid #304347;
+  margin-top: 25px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #91a7a8;
+  font-size: 11px;
+}
+
+.form-footer i {
+  color: #43c6b5;
+}
+
+footer {
+  border-top: 1px solid #263a3e;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #82999a;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 850px) {
+  .event-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 60px 0;
+  }
+
+  .event-info {
+    max-width: 650px;
+  }
+
+  .registration-panel {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .page-container {
+    width: 92%;
+  }
+
+  .top-bar > p {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .event-info h1 {
+    font-size: 43px;
+  }
+
+  .registration-panel {
+    padding: 25px 20px;
+  }
+
+  footer {
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
