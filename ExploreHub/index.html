@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploreHub - Discover More</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="top-bar">
+
+    <a href="#" class="brand">
+      <i class="fa-solid fa-compass"></i>
+      Explore<span>Hub</span>
+    </a>
+
+    <button id="menuButton" class="menu-button" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#enquiry">Enquiry</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <p class="eyebrow">DISCOVER SOMETHING NEW</p>
+
+      <h1>Find your next<br><span>great escape.</span></h1>
+
+      <p>
+        Explore interesting places, discover new experiences
+        and plan your next adventure.
+      </p>
+
+      <a href="#destinations" class="hero-link">
+        Explore destinations
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
+
+    <section class="destinations-section" id="destinations">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE OUR COLLECTION</p>
+          <h2>Popular Destinations</h2>
+        </div>
+
+        <select id="savedCategory" aria-label="Preferred destination category">
+          <option value="">Choose preference</option>
+          <option value="nature">Nature</option>
+          <option value="city">City</option>
+          <option value="beach">Beach</option>
+        </select>
+      </div>
+
+      <div class="filter-buttons">
+        <button id="allBtn">All</button>
+        <button id="natureBtn">Nature</button>
+        <button id="cityBtn">City</button>
+        <button id="beachBtn">Beach</button>
+      </div>
+
+      <div class="destination-grid">
+
+        <article class="destination-card nature">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700" alt="Green forest">
+
+          <div class="card-content">
+            <p>NATURE</p>
+            <h3>Forest Retreat</h3>
+            <span>Reconnect with the outdoors.</span>
+          </div>
+        </article>
+
+        <article class="destination-card city">
+          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700" alt="City skyline">
+
+          <div class="card-content">
+            <p>CITY</p>
+            <h3>Urban Escape</h3>
+            <span>Experience the energy of the city.</span>
+          </div>
+        </article>
+
+        <article class="destination-card beach">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" alt="Tropical beach">
+
+          <div class="card-content">
+            <p>BEACH</p>
+            <h3>Coastal Paradise</h3>
+            <span>Relax beside the ocean.</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button id="savePreference">
+        <i class="fa-solid fa-bookmark"></i>
+        Save My Category Preference
+      </button>
+
+      <p id="preferenceFeedback"></p>
+
+    </section>
+
+    <section class="enquiry-section" id="enquiry">
+
+      <div class="enquiry-info">
+        <p class="eyebrow">LET'S PLAN YOUR NEXT TRIP</p>
+        <h2>Have a destination in mind?</h2>
+        <p>
+          Send us an enquiry and tell us where you would
+          love to explore next.
+        </p>
+      </div>
+
+      <form id="enquiryForm">
+
+        <div class="form-group">
+          <label for="visitorName">Your Name</label>
+          <input type="text" id="visitorName" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="visitorEmail">Email Address</label>
+          <input type="email" id="visitorEmail" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="visitorMessage">Your Message</label>
+          <textarea id="visitorMessage" placeholder="Where would you like to go?"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+          Send Enquiry
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <p id="formFeedback"></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EXPLOREHUB © 2026</p>
+    <p>DISCOVER MORE. EXPERIENCE MORE.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
